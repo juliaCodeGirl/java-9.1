@@ -3,18 +3,111 @@ package ru.netology.domain;
 public class Post {
     private String text;
     private int ownerID;
-    private int postID;
+    private int fromID;//идентификатор автора записи
+    private int createdBy;//идентификатор администратора, который опубликовал запись
+    private int postID;//аналогично записи id в док-ах
     private int date;
+    private int replyOwnedId;//идентификатор владельца записи, в ответ на которую была оставлена текущая
+    private int replyPostId;//идентификатор записи, в ответ на которую была оставлена текущая
+    private int friendsOnly;//если запись была создана с опцией «Только для друзей»
     private boolean canDelete;
-    private boolean isPin;
-    private boolean canComplaint;
+    private boolean isPin;//аналогично is_pinned
+    private int canPin;//информация о том, может ли текущий пользователь закрепить запись
+    private boolean canComplaint;//не увидела в док-ах ВК
     private boolean isFavorite;
     private boolean markedAsAds;
     private LikesInfo likesInfo;
     private CommentsInfo commentsInfo;
     private RepostsInfo repostsInfo;
-    private int viewsInfo;
+    private ViewsInfo viewsInfo;
+    private int postType;//тип записи, может принимать следующие значения: post, copy, reply, postpone, suggest.
+    private int signerId;//идентификатор автора, если запись была опубликована от имени сообщества и подписана пользователем;
+    private int canEdit;//информация о том, может ли текущий пользователь редактировать запись
+    private int postonedId;//идентификатор отложенной записи.
     private Geo geo;
+    private PostSource postSource;
+
+    public int getFromID() {
+        return fromID;
+    }
+
+    public void setFromID(int fromID) {
+        this.fromID = fromID;
+    }
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public int getReplyOwnedId() {
+        return replyOwnedId;
+    }
+
+    public void setReplyOwnedId(int replyOwnedId) {
+        this.replyOwnedId = replyOwnedId;
+    }
+
+    public int getReplyPostId() {
+        return replyPostId;
+    }
+
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
+    }
+
+    public int getFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public void setFriendsOnly(int friendsOnly) {
+        this.friendsOnly = friendsOnly;
+    }
+
+    public int getCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(int canPin) {
+        this.canPin = canPin;
+    }
+
+
+    public int getPostType() {
+        return postType;
+    }
+
+    public void setPostType(int postType) {
+        this.postType = postType;
+    }
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+    public int getCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(int canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public int getPostonedId() {
+        return postonedId;
+    }
+
+    public void setPostonedId(int postonedId) {
+        this.postonedId = postonedId;
+    }
+
 
     public String getText() {
         return text;
@@ -112,13 +205,6 @@ public class Post {
         this.repostsInfo = repostsInfo;
     }
 
-    public int getViewsInfo() {
-        return viewsInfo;
-    }
-
-    public void setViewsInfo(int viewsInfo) {
-        this.viewsInfo = viewsInfo;
-    }
 
     public Geo getGeo() {
         return geo;

@@ -2,8 +2,8 @@ package ru.netology.domain;
 
 public class RepostsInfo {
     private int counter;
-    private int canRepost;
-    private int alreadyRepost;
+    private int canRepost;//можно сделать репост
+    private int alreadyRepost;//аналогично user_reposted
 
     public int getCounter() {
         return counter;
