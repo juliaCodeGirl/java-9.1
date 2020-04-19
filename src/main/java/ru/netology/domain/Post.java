@@ -23,7 +23,7 @@ public class Post {
     private int postType;//тип записи, может принимать следующие значения: post, copy, reply, postpone, suggest.
     private int signerId;//идентификатор автора, если запись была опубликована от имени сообщества и подписана пользователем;
     private int canEdit;//информация о том, может ли текущий пользователь редактировать запись
-    private int postonedId;//идентификатор отложенной записи.
+    private int postponedId;//идентификатор отложенной записи.
     private Geo geo;
     private PostSource postSource;
 
@@ -100,12 +100,12 @@ public class Post {
         this.canEdit = canEdit;
     }
 
-    public int getPostonedId() {
-        return postonedId;
+    public int getPostponedId() {
+        return postponedId;
     }
 
-    public void setPostonedId(int postonedId) {
-        this.postonedId = postonedId;
+    public void setPostponedId(int postponedId) {
+        this.postponedId = postponedId;
     }
 
 
@@ -195,14 +195,6 @@ public class Post {
 
     public void setCommentsInfo(CommentsInfo commentsInfo) {
         this.commentsInfo = commentsInfo;
-    }
-
-    public RepostsInfo getRepostsInfo() {
-        return repostsInfo;
-    }
-
-    public void setRepostsInfo(RepostsInfo repostsInfo) {
-        this.repostsInfo = repostsInfo;
     }
 
 
