@@ -208,12 +208,5 @@ public class Post {
         this.geo = geo;
     }
 
-    public PostSource getPostSource() {
-        return postSource;
-    }
-
-    public void setPostSource(PostSource postSource) {
-        this.postSource = postSource;
-    }
 }
 
