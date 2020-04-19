@@ -27,6 +27,9 @@ public class Post {
     private Geo geo;
     private PostSource postSource;
 
+    public Post() {
+    }
+
     public int getFromID() {
         return fromID;
     }
@@ -204,6 +207,14 @@ public class Post {
 
     public void setGeo(Geo geo) {
         this.geo = geo;
+    }
+
+    public PostSource getPostSource() {
+        return postSource;
+    }
+
+    public void setPostSource(PostSource postSource) {
+        this.postSource = postSource;
     }
 }
 
