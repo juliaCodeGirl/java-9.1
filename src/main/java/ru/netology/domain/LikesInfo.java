@@ -1,36 +1,36 @@
 package ru.netology.domain;
 
 public class LikesInfo {
-    private int counter;
-    private int canLikes;//аналогично can_likes
-    private int userLikes;//аличие отметки «Мне нравится» от текущего пользователя
-    private int canPublish;//нформация о том, может ли текущий пользователь сделать репост записи
+    private Integer counter;
+    private Integer canLikes;//аналогично can_likes
+    private Integer userLikes;//наличие отметки «Мне нравится» от текущего пользователя
+    private Integer canPublish;//информация о том, может ли текущий пользователь сделать репост записи
 
-    public int getCounter() {
+    public Integer getCounter() {
         return counter;
     }
 
-    public void setCounter(int counter) {
+    public void setCounter(Integer counter) {
         this.counter = counter;
     }
 
-    public int getCanLikes() {
+    public Integer getCanLikes() {
         return canLikes;
     }
 
-    public void setCanLikes(int canLikes) {
+    public void setCanLikes(Integer canLikes) {
         this.canLikes = canLikes;
     }
 
-    public int getUserLikes() {
+    public Integer getUserLikes() {
         return userLikes;
     }
 
-    public void setUserLikes(int userLikes) {
+    public void setUserLikes(Integer userLikes) {
         this.userLikes = userLikes;
     }
 
-    public int getCanPublish() {
+    public Integer getCanPublish() {
         return canPublish;
     }
 

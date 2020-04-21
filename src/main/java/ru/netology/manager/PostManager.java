@@ -5,7 +5,7 @@ import ru.netology.domain.Post;
 public class PostManager {
         private Post[] posts;
 
-        public Post[] searchWall(int ownerId, String domain, String query, int ownerOnly, int count,int offset) {
+        public Post[] searchWall(int ownerId, String domain, String query, int ownersOnly, int count,int offset) {
             return null;
         }
 

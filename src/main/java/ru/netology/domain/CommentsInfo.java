@@ -1,34 +1,34 @@
 package ru.netology.domain;
 
 public class CommentsInfo {
-    private int counter;
-    private int canComment;//аналогично can_post
+    private Integer counter;//аналогично count
+    private Integer canComment;//аналогично can_post
     private boolean openComments;//аналогично can_open
-    private int groupsCanPost;//информация о том, могут ли сообщества комментировать запись;
+    private Integer groupsCanPost;//информация о том, могут ли сообщества комментировать запись;
     private boolean canClose;//может ли текущий пользователь закрыть комментарии к записи;
 
-    public int getCounter() {
+    public Integer getCounter() {
         return counter;
     }
 
-    public void setCounter(int counter) {
+    public void setCounter(Integer counter) {
         this.counter = counter;
     }
 
-    public int getCanComment() {
+    public Integer getCanComment() {
         return canComment;
     }
 
-    public void setCanComment(int canComment) {
+    public void setCanComment(Integer canComment) {
         this.canComment = canComment;
     }
 
 
-    public int getGroupsCanPost() {
+    public Integer getGroupsCanPost() {
         return groupsCanPost;
     }
 
-    public void setGroupsCanPost(int groupsCanPost) {
+    public void setGroupsCanPost(Integer groupsCanPost) {
         this.groupsCanPost = groupsCanPost;
     }
 
